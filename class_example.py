@@ -2,6 +2,8 @@ import random
 
 
 class Car:
+    __color = (0, 0, 255)
+    __year = 2000
     def __init__(self, brand, model,
                  year=2000, color=(0, 0, 255)):
         """ инициализация """
@@ -63,24 +65,4 @@ class KiaRio(Kia):
 
 
 if __name__ == '__main__':
-    # ford = Car(brand='Ford', model='Focus', year=2005)
-    # print(ford)
-    # ford.change_color((255, 0, 0))
-    # print(ford)
-    # ford.show_condition()
-    # ford.crash(random.choice(['low', 'medium', 'high', 'total']))
-    # ford.show_condition()
-    kia = Kia(model='Picanto', year=2010)
-    print(kia)
-    kia.show_condition()
-    kia_rio = KiaRio()
-    print(kia_rio)
-
-    print(issubclass(KiaRio, Kia))
-    print(issubclass(KiaRio, Car))
-
-    print(isinstance(kia_rio, KiaRio))
-    print(isinstance(kia_rio, Kia))
-    print(isinstance(kia_rio, Car))
-
-
+    KiaRio(Kia)
